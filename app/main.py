@@ -116,6 +116,9 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from viv_auth import init_auth
+init_auth(app, engine, Base, get_db, app_name="Search Pro")
+
 
 # ── Root dashboard (no auth) ──────────────────────────────────────────────────
 
